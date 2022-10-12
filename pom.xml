@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>me.tptuaasn</groupId>
+	<artifactId>SSB-IslandSizePermission</artifactId>
+	<version>1.0</version>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.spigotmc</groupId>
+			<artifactId>spigot-api</artifactId>
+			<version>1.19.1-R0.1-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.bgsoftware</groupId>
+			<artifactId>SuperiorSkyblockAPI</artifactId>
+			<version>1.11.1</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	<!-- Here we tell maven where it should look for the defined dependencies. -->
+	<!-- Right now, we only need the Spigot repository because we don't have other dependencies -->
+	<repositories>
+		<repository>
+			<id>spigot-snapshots</id>
+			<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+		</repository>
+		<repository>
+			<id>bg-repo</id>
+			<url>https://repo.bg-software.com/repository/api/</url>
+		</repository>
+	</repositories>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+		<resources>
+			<!-- This tells Maven that it should "filter" all files in the resource directory. More on that later. -->
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+	</build>
+
+</project>

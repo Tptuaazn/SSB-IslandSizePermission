@@ -1,0 +1,9 @@
+name: SSB-IslandSizePermission
+version: ${project.version}
+main: me.tptuaasn.IslandSize
+
+description: Your island size after island created will be equal with specified permission.
+author: Tptuaasn
+api-version: 1.13
+
+depend: [SuperiorSkyblock2]
