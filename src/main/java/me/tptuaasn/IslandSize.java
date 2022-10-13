@@ -44,6 +44,7 @@ public class IslandSize extends JavaPlugin implements Listener {
 
 	private List<String> getValues(Player p) {
 		return Stream.of(p.getEffectivePermissions()).flatMap(Collection::stream)
+				.filter(s -> s.getPermission().startsWith("superior.island.size."))
 				.flatMap(s -> Arrays.stream(s.getPermission().split("superior.island.size.")))
 				.collect(Collectors.toList());
 	}
